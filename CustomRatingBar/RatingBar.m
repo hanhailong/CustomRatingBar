@@ -42,11 +42,13 @@
  *  @param delegate          代理
  */
 -(void)setImageDeselected:(NSString *)deselectedName halfSelected:(NSString *)halfSelectedName fullSelected:(NSString *)fullSelectedName andDelegate:(id<RatingBarDelegate>)delegate{
-        
+    
     self.delegate = delegate;
     
     unSelectedImage = [UIImage imageNamed:deselectedName];
+    
     halfSelectedImage = halfSelectedName == nil ? unSelectedImage : [UIImage imageNamed:halfSelectedName];
+    
     fullSelectedImage = [UIImage imageNamed:fullSelectedName];
     
     height = 0.0,width = 0.0;
@@ -70,6 +72,17 @@
         width = [unSelectedImage size].width;
     }
     
+    //控件宽度适配
+    CGRect frame = [self frame];
+    
+    CGFloat viewWidth = width * 5;
+    if (frame.size.width > viewWidth) {
+        viewWidth = frame.size.width;
+    }
+    frame.size.width = viewWidth;
+    frame.size.height = height;
+    [self setFrame:frame];
+    
     starRating = 0.0;
     lastRating = 0.0;
     
@@ -79,11 +92,20 @@
     _s4 = [[UIImageView alloc] initWithImage:unSelectedImage];
     _s5 = [[UIImageView alloc] initWithImage:unSelectedImage];
     
-    [_s1 setFrame:CGRectMake(0,         0, width, height)];
-    [_s2 setFrame:CGRectMake(width,     0, width, height)];
-    [_s3 setFrame:CGRectMake(2 * width, 0, width, height)];
-    [_s4 setFrame:CGRectMake(3 * width, 0, width, height)];
-    [_s5 setFrame:CGRectMake(4 * width, 0, width, height)];
+    
+    //星星图片之间的间距
+    CGFloat space = (CGFloat)(viewWidth - width*5)/6;
+    
+    CGFloat startX = space;
+    [_s1 setFrame:CGRectMake(startX,         0, width, height)];
+    startX += width + space;
+    [_s2 setFrame:CGRectMake(startX,     0, width, height)];
+    startX += width + space;
+    [_s3 setFrame:CGRectMake(startX, 0, width, height)];
+    startX += width + space;
+    [_s4 setFrame:CGRectMake(startX, 0, width, height)];
+    startX += width + space;
+    [_s5 setFrame:CGRectMake(startX, 0, width, height)];
     
     [_s1 setUserInteractionEnabled:NO];
     [_s2 setUserInteractionEnabled:NO];
@@ -97,11 +119,6 @@
     [self addSubview:_s4];
     [self addSubview:_s5];
     
-    CGRect frame = [self frame];
-    frame.size.width = width * 5;
-    frame.size.height = height;
-    [self setFrame:frame];
-    
 }
 
 /**
@@ -110,6 +127,7 @@
  *  @param rating 评分值
  */
 -(void)displayRating:(float)rating{
+    
     [_s1 setImage:unSelectedImage];
     [_s2 setImage:unSelectedImage];
     [_s3 setImage:unSelectedImage];
@@ -149,7 +167,7 @@
     
     starRating = rating;
     lastRating = rating;
-    [_delegate ratingChanged:rating];
+    [_delegate ratingBar:self ratingChanged:rating];
 }
 
 /**
@@ -180,12 +198,36 @@
     }
     
     CGPoint point = [[touches anyObject] locationInView:self];
-    int newRating = (int) (point.x / width) + 1;
-    if (newRating > 5)
-        return;
     
-    if (point.x < 0) {
-        newRating = 0;
+    //星星图片之间的间距
+    CGFloat space = (CGFloat)(self.frame.size.width - width*5)/6;
+    
+    float newRating = 0;
+    
+    if (point.x >= 0 && point.x <= self.frame.size.width) {
+        
+        if (point.x <= space+width*0.5f) {
+            newRating = 0.5;
+        }else if (point.x < space*2+width){
+            newRating = 1.0;
+        }else if (point.x < space*2+width*1.5){
+            newRating = 1.5;
+        }else if (point.x <= 3*space+2*width){
+            newRating = 2.0;
+        }else if (point.x <= 3*space+2.5*width){
+            newRating = 2.5;
+        }else if (point.x <= 4*space+3*width){
+            newRating = 3.0;
+        }else if (point.x <= 4*space+3.5*width){
+            newRating = 3.5;
+        }else if (point.x <= 5*space+4*width){
+            newRating = 4.0;
+        }else if (point.x <=5*space+4.5*width){
+            newRating = 4.5;
+        }else {
+            newRating = 5.0;
+        }
+        
     }
     
     if (newRating != lastRating){

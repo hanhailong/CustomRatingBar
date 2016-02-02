@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RatingBar;
 
 /**
  *  星级评分条代理
@@ -16,10 +17,10 @@
 /**
  *  评分改变
  *
- *  @param newRating 新的值
+ *  @param ratingBar 评分控件
+ *  @param newRating 评分值
  */
-- (void)ratingChanged:(float)newRating;
-
+- (void)ratingBar:(RatingBar *)ratingBar ratingChanged:(float)newRating;
 @end
 
 @interface RatingBar : UIView

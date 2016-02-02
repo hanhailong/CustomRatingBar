@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "iconfont-banxing.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ratingbar_unselected@2x.png",
       "scale" : "2x"
     },
     {
