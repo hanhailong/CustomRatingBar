@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Resume</title>
+
+
+</head>
+
+
+<body>
+<!--=========================以下是头部header部分=====================================-->
+<div class="pic">
+    <a><img src="images/幻灯片1.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片2.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片3.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片4.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片5.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片6.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片7.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片8.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片9.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片10.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片11.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片12.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片13.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/perfume.png"><img src="images/幻灯片14.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/牛奶网站.png"><img src="images/幻灯片15.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/护肤品网站.png"><img src="images/幻灯片16.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/电商-包包网站.png"><img src="images/幻灯片17.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/企业网站.png"><img src="images/幻灯片18.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/红酒ui.png"><img src="images/幻灯片19.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a href="images/红酒详情页.png"><img src="images/幻灯片20.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片21.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片22.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片23.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片24.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片25.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片26.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片27.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片28.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片29.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片30.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片31.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片32.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片33.jpg"/></a>
+    <div class="line" style="height:30px; background:#dadada"></div>
+    <a><img src="images/幻灯片34.jpg"/></a>
+</div>
+	   
+</body>  
+</html>
